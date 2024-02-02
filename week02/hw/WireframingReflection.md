@@ -1,0 +1,3 @@
+###The reflection on "Five Important Considerations for Wireframing"
+
+The goal of UX design is not just problem solving, but requires clear communication and discussion, and wireframes are an effective tool for driving conversation and new ideas. First of all we can't focus on the art design, but we have to consider the overall structure and logic. Using sketches and tools is important in designing wireframes, and good tools can improve efficiency. Getting early feedback is important to better understand audience needs.
