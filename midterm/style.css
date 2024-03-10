@@ -104,11 +104,11 @@ ul li ul li {
     float: left;
   }
 
-  .img1 img{
+  img{
     transition: transform 0.3s ease-in-out;
   }
 
-  .img1 img:hover{
+  img:hover{
     transform: scale(1.05);
   }
 
@@ -165,4 +165,49 @@ ul li ul li {
 
   h4{
     font-size: 25px;
+  }
+
+
+/* Gallery */
+
+
+ 
+  
+  /* Flexbox Simple Rows and Columns */
+  .container {
+    z-index: -1;
+    top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+  .item {
+    position: relative;
+    background-image: url(https://img-qn.51miz.com/preview/photo/00/01/54/03/new-P-1540352-4BE2A87E.jpg!/quality/90/unsharp/true/compress/true/format/jpg/fw/300);
+    border: 10px;
+    border-radius: 10px;
+    width: 45%;
+    height: 300px;
+    display: flex;
+    align-self: center;
+    box-shadow:0 10px 10px #220e09;
+    align-self: center;
+    align-items: center;
+  }
+
+
+
+  .container img {
+    position: relative;
+    width: 400px;
+    height: 270px;
+    overflow: hidden;
+    align-self: center;
+    align-items: center;
   }
