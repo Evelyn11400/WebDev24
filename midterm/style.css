@@ -138,7 +138,6 @@ ul li ul li {
   .main{
     position: relative;
     background-color: #BACAC6;
-    /* width: 1300px; */
     height:fit-content;
     font-size: large;
     color: #60281A;
@@ -173,7 +172,6 @@ ul li ul li {
 
  
   
-  /* Flexbox Simple Rows and Columns */
   .container {
     z-index: -1;
     top: 50px;
@@ -195,7 +193,6 @@ ul li ul li {
     width: 45%;
     height: 300px;
     display: flex;
-    align-self: center;
     box-shadow:0 10px 10px #220e09;
     align-self: center;
     align-items: center;
