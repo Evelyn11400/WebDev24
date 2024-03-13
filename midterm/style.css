@@ -38,7 +38,7 @@ a:hover{
 /* navbar */
 
 .nav{
-  position: fixed;
+  position: relative;
   width: 100%;
     height: 50px;
     background: #60281A;
@@ -46,6 +46,10 @@ a:hover{
     z-index: 10;
     top: 0;
     border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav ul{
@@ -80,6 +84,7 @@ a:hover{
     visibility: hidden;
     top: 48px;
     left: 0;
+    z-index: 12;
     
 }
 
@@ -117,7 +122,7 @@ a:hover{
     height: auto;
   }
 
-  img:hover{
+  .img1 img:hover{
     transform: scale(1.05);
   }
 
@@ -125,15 +130,15 @@ a:hover{
   
 
   .title{
-    position: fixed;
+    position: relative;
     background-color: #41555D;
     width: 100%;
     height: auto;
     text-align: center;
     box-shadow:0 5px 5px #220e09;
-    top: 30px;
+    /* top: 30px; */
     z-index: 9;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 10px;
     font-size: 60px;
     /* font-family: "Angkor", serif; */
@@ -153,7 +158,8 @@ a:hover{
     /* left: 20px;
     top: 30px;
     bottom: 0; */
-    margin-top: 15%;
+    /* margin-top: 5%; */
+    margin-right: 5%;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -163,11 +169,7 @@ a:hover{
   }
 
   .content{
-    /* position: relative; */
     width: 45%;
-    min-width: 800px;
-    /* top: 270px;
-    right: 50px; */
     overflow: auto;
     font-size: 18px;
     border: 0;
@@ -195,12 +197,9 @@ a:hover{
     min-height: 200vh;
     justify-content: space-around;
     align-items: center;
-    /* align-self: center; */
-      margin-top: 80px;
   }
   
   .item {
-    /* position: relative; */
     background-image: url(https://img-qn.51miz.com/preview/photo/00/01/54/03/new-P-1540352-4BE2A87E.jpg!/quality/90/unsharp/true/compress/true/format/jpg/fw/300);
     border: 10%;
     border-radius: 10px;
@@ -208,9 +207,29 @@ a:hover{
     height: 60vh;
     display: flex;
     box-shadow:0 10px 10px #220e09;
-    /* align-self: center; */
     align-items: center;
     justify-content: center;
+  }
+
+  .frame{
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 1000px;
+    height: auto;
+    transition: 0.5s ease-in-out;
+    margin-top: 10px;
+  }
+
+  .frame:hover{
+    color: rgba(255, 255, 255, 0.05);
+  }
+
+  .frame:hover img{
+    transform: scale(1.2)
+    translateY(50px)
   }
 
 
@@ -221,12 +240,121 @@ a:hover{
     overflow: hidden;
     align-self: center;
     align-items: center;
+    overflow: hidden;
   }
+
+
+
+.mobile{
+  z-index: 100;
+  position: fixed;
+  opacity: 0;
+}
 
 
 
   /* delate unnecessary codes */
 
   @media screen and (max-width: 768px) {
+    
+      .nav{
+        height: 200px;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        padding: 0;
+        left: 0;
+        flex-direction: column;
+        width: auto;
+        background-color: #BACAC6;
+        box-shadow: none;
+      }
+
+      .nav ul{
+        margin: 0;
+        color: #220e09;
+      }
+    
+      .title{
+        font-size: 36px;
+        background-color: none;
+        width: 100vw;
+        /* margin-bottom: -20px;
+        margin-top: -15px; */
+        box-shadow: none;
+        align-items: center;
+      }
+     
+      .main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding: 10px;
+       
+      }
+
+      .content{
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+
+      }
+    
+      .img1 {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        float: none;
+      }
+        
+      .container {
+        margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 0;
+      }
+    
+      .item {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      img:hover{
+        transform: scale(1);
+      }
+
+     
+
+     
+      .nav ul{
+        padding: 0;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .nav ul li{
+        text-align: center;
+
+      }
+
+           
+      .nav li {
+        left: 0;
+        width: 100vw;
+      padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .container{
+        
+        flex-direction: column;
+      }
+    
+    }
   
-  }
