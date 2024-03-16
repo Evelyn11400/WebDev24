@@ -265,9 +265,10 @@ a:hover{
         height: 200px;
         width: 100vw;
         flex-direction: column;
-        justify-content: stretch;
-        align-items: flex-start;
-        text-align: center;
+        padding: 0;
+        align-items: start;
+        text-align: start;
+        justify-content: start;
         padding: 0;
         left: 0;
         flex-direction: column;
@@ -280,20 +281,28 @@ a:hover{
         margin: 0;
         color: #220e09;
         padding: 0;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+        align-items: start;
+        text-align: start;
+        justify-content: start;
+        left: 0;
       }
 
       .nav ul li{
-        text-align: center;
+        left: 0;
+        text-align: start;
+        justify-content: start;
       }
 
       .nav li {
         left: 0;
         width: 100vw;
-      padding: 0;
+        padding: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .nav a{
+        color: #60281A;
+        left: 0;
       }
     
       .title{
@@ -316,7 +325,7 @@ a:hover{
 
       .content{
         display: flex;
-        align-items: stretch;
+        /* align-items: stretch; */
         width: 100%;
 
       }
@@ -335,11 +344,12 @@ a:hover{
         align-items: center;
         display: flex;
         margin-top: 0;
+        flex-direction: column;
       }
     
       .item {
         width: 90%;
-        height: 200px;
+        height: 300px;
         margin-bottom: 20px;
         margin-top: 20px;
       }
