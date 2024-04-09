@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>test js</title>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+        let score = 0;
+        let intervalId;  
+        const blocks = document.querySelectorAll('.block');
+    
+    function highlightBlocks() {
+            blocks.forEach(block => block.classList.remove('highlight'));
+            const count = Math.floor(Math.random() * 3) + 1;
+            for (let i = 0; i < count; i++) {
+                const index = Math.floor(Math.random() * blocks.length);
+                blocks[index].classList.add('highlight');
+            }
+        }
+    
+    function checkKey(e) {
+        let keyMatched = false;
+
+        blocks.forEach(function(block) {
+        if (block.getAttribute('data-key') == e.key) {
+            keyMatched = true; 
+
+            if (block.classList.contains('highlight')) {
+                score++; 
+                block.classList.remove('highlight'); 
+            } else {
+                score--; 
+            }
+        }
+        });
+
+        document.getElementById('score').textContent = score; 
+
+        if (score < 0) {
+        alert("game over");
+        score = 0;
+        document.getElementById('score').textContent = score; 
+        }
+        }
+    
+        function startGame() {
+            if (!intervalId) {
+                intervalId = setInterval(highlightBlocks, 500);  
+            }
+        }
+    
+        function pauseGame() {
+            clearInterval(intervalId);
+            intervalId = null;  
+        }
+    
+        document.addEventListener('keydown', checkKey);
+    
+        window.startGame = startGame;
+        window.pauseGame = pauseGame;
+    
+        startGame(); 
+
+
+    });
+    
+    
+        </script>
+    <style type="text/css">
+        .block {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: rgb(177, 177, 177);
+            display: inline-block;
+            text-align: center;
+            font-size: large;
+            color: rgb(0, 0, 0);
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        p{
+            font-size: 48px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        .note{
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <p>Reaction Time Trainer</p>
+    <button onclick="pauseGame()">pause</button>
+    <button onclick="startGame()">start</button>
+    <p class="note">Press "A", "S", “L", ";"</p>
+
+    <div>
+        <div id="block1" class="block" data-key="a">A</div>
+        <div id="block2" class="block" data-key="s">S</div>
+        <div id="block3" class="block" data-key="l">L</div>
+        <div id="block4" class="block" data-key=";">;</div>
+    </div>
+    <p>score: <span id="score">0</span></p>
+
+    
+</body>
+</html>
