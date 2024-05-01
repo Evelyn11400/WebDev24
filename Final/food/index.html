@@ -15,25 +15,71 @@
 
            <div class="duck">
             <div class="container">
-
+                <img id="image" src="">
             </div>
-            <button class="bing" onclick="addBing()">
+
+            <button class="bing" onclick="addIngredient('Pancake')" id="PancakeButton">
                 <img src="./bing.png" alt="">
 
             </button>
+            <button class="jiang" onclick="addIngredient('Sauce')" id="SauceButton">
+                <img src="./jiang.png" alt="">
+
+            </button>
+            <button class="cong" onclick="addIngredient('Scallion')" id="ScallionButton">
+                <img src="./cong.png" alt="">
+
+            </button>
+            <button class="ya" onclick="addIngredient('Duck')" id="DuckButton">
+                <img src="./ya.png" alt="">
+
+            </button>
+
+            <div class="instructions">
+                <p id="instructions">First add the Pancake</p>
+            </div>
 
            </div>
            <div class="hulu">
-
+            <div class="title">Tanghulu</div>
+            <div class="subtitle">A kind of candied fruit</div>
+            <div class="candy"><img src="./hulu.png" alt=""></div>
 
            </div>
     
 
 
     <script type="text/javascript">
-        function addBing(){
-            console.log("bing")
+        const images = {
+            'Pancake': './b.png',
+            'Sauce': './bj.png',
+            'Scallion': './bjc.png',
+            'Duck': './bjcy.png'
+        };
+        
+        const steps = ['Pancake', 'Sauce', 'Scallion', 'Duck'];
+        let currentStep = 0;
+
+        function addIngredient(ingredient){
+            if (ingredient !== steps[currentStep]) {
+                return; 
+            }
+
+            document.getElementById('image').src = images[ingredient];
+            document.getElementById('instructions').textContent = 'Now add the ' + steps[currentStep + 1];
+
+            if (currentStep < steps.length - 1) {
+                document.getElementById(steps[currentStep] + 'Button').disabled = true;
+                document.getElementById(steps[currentStep + 1] + 'Button').disabled = false;
+                currentStep++;
+            } else {
+                document.getElementById('instructions').textContent = 'Your duck is ready! Just roll it up and eat it!';
+            }
+
+            console.log(currentStep)
         }
+
+        
     </script>
     </body>
     </html>
