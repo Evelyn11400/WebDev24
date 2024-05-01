@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Protest+Riot&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  html{
+    background-color: #fcf7e4;
+  }
+
+  .button{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #EFBC9B ;
+    border-radius: 50px;
+    text-align: center;
+    color: #6d9288;
+    margin-top: 50px;
+    font-family:"Indie Flower", cursive;
+    font-size: 40px;
+    right: 50px;
+    border-width: 10px;
+    border-color: black;
+  }
+
+  .button:hover{
+    background-color: #f3cdb3;
+  }
+
+  .button p{
+    padding-top: 10px;
+    line-height: 40px;
+  }
+
+  .duck{
+    border-color:#9CAFAA ;
+    width: 800px;
+    height: 800px;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+    border-style: dashed;
+    display: flex;
+  }
+
+  .hulu{
+    border-color:#9CAFAA ;
+    width: 700px;
+    height: 800px;
+    top: 50px;
+    left: 850px;
+    position: absolute;
+    border-style: dashed;
+  }
+
+  .bing{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: none;
+    left: 500px;
+    background-color: black;
+    
+  }

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Protest+Riot&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  html{
+    background-color: #fcf7e4;
+  }
+
+  .title{
+    text-align: center;
+    margin-top: 250px;
+    font-family: "Protest Riot", sans-serif;
+    font-size: 100px;
+    color: #6d9288;
+  }
+
+  .subtitle{
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Satisfy", cursive;
+    font-size: 35px;
+    color: #9CAFAA;
+  }
+ 
+  .buttons{
+   display: flex;
+   justify-content: center;
+   gap: 100px;
+   margin-top: 50px;
+  }
+
+.button {
+    width: 300px;
+    height: 150px;
+    background-color: #EFBC9B;
+    border-radius: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+
+  }
+
+  .button-text {
+    position: absolute;
+    color: transparent; 
+    font-size: 45px;
+    transition: color 0.3s ease;
+    font-family: "Protest Riot", sans-serif;
+  }
+
+  .button:hover .button-text {
+    color: #6d9288; 
+}
+
+.button img {
+    width: 100%;
+    height: auto;
+    transition:  transform 0.5s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+.button:hover img {
+    opacity: 0.1; 
+    transform: translateX(50px);
+}
+
+.button:hover{
+    background-color: #f3cdb3;
+}

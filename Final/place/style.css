@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Protest+Riot&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  html{
+    background-color: #fcf7e4;
+  }
+
+  .button{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #EFBC9B ;
+    border-radius: 50px;
+    text-align: center;
+    color: #6d9288;
+    margin-top: 50px;
+    font-family:"Indie Flower", cursive;
+    font-size: 40px;
+    right: 50px;
+    border-width: 10px;
+    border-color: black;
+  }
+
+  .button:hover{
+    background-color: #f3cdb3;
+  }
+
+  .button p{
+    padding-top: 10px;
+    line-height: 40px;
+  }
+
+  .title{
+    position: absolute;
+    font-family: "Satisfy", cursive;
+    font-size: 60px;
+    color: #6d9288;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .random{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #EFBC9B;
+    color: #6d9288;
+    font-size: 30px;
+    font-family: "Indie Flower";
+    position: absolute;
+    top: 300px;
+    left: 140px;
+    border-color: transparent;
+  }
+
+  .random:hover{
+    background-color: #f3cdb3;
+  }
+
+  .content{
+    position: absolute;
+    
+    top: 200px;
+    left: 400px;
+    
+    width: 1100px;
+    height: 600px;
+  }
+
+  #name{
+    position: relative;
+    height: 80px;
+    width: auto;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-size: 60px;
+  }
+
+  #image{
+    position: relative;
+    width: 1100px;
+    height: 400px;
+    display: none;
+    overflow: hidden;
+  }
+
+  #image img{
+    transition: transform 0.5s ease;
+  }
+
+ #image img:hover{
+    transform: scale(1.2);
+ }
+
+  #description{
+    position: relative;
+    width: 1100px;
+    height: 100px;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-size: 40px;
+  }

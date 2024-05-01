@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Places</title>
+        <link rel="stylesheet" href="./style.css"  type="text/css" />
+      
+    </head>
+    <body>
+       <a href="../main/index.html"><div class="button">
+        <p>Back to Main Page</p>
+       </div></a>
+       <div class="title"><p>Randomize Your Destination!</p></div>
+       <button class="random" onclick="randomPlace()">Click Me!</button>
+       <div class="content">
+        <p id="name"></p>
+        <img id="image" src="">
+        <p id="description"></p>
+       </div>
+
+       <script type="text/javascript">
+        const places = [
+            { name: "798 Art District", image: "./798.png" , description:"An art community with a lot of exhibitions."},
+            { name: "Forbidden City", image: "./forbidden city.png" , description:"Where the ancient emperors lived."},
+            { name: "The Temple of Heaven", image: "./temple of heaven.png" , description:"Where ancient emperors prayed to the heavens for rain."},
+            { name: "Bird's Nest", image: "./birdnest.png" , description:"Where the 2008 Olympics held."},
+            { name: "Hutong", image: "./hutong.png" , description:"Traditional Beijing alley."},
+        ];
+       function randomPlace(){
+            const randomIndex = Math.floor(Math.random() * places.length); 
+            const selectedPlace = places[randomIndex];
+            document.getElementById('name').textContent = selectedPlace.name
+            document.getElementById('image').src = selectedPlace.image
+            document.getElementById('image').style.display = 'block';
+            document.getElementById('description').textContent = selectedPlace.description
+        };
+
+       </script>
+    </body>
+    </html>
