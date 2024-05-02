@@ -29,6 +29,7 @@
             { name: "Hutong", image: "./hutong.png" , description:"Traditional Beijing alley."},
         ];
        function randomPlace(){
+        console.log("randomPlace function is called")
             const randomIndex = Math.floor(Math.random() * places.length); 
             const selectedPlace = places[randomIndex];
             document.getElementById('name').textContent = selectedPlace.name

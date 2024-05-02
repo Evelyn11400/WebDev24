@@ -105,3 +105,61 @@
     font-family: "Indie Flower", cursive;
     font-size: 40px;
   }
+
+  @media screen and (max-width: 768px) {
+.button{
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  top: 10px;
+  right: 50px;
+}
+
+.title{
+  font-size: 40px;
+  top: 100px;
+  left: 60px;
+  width: 100%;
+}
+
+.content{
+  width: 300px;
+  height: 500px;
+  left: 30px;
+  top: 200px;
+}
+
+.random {
+  position: absolute;
+  top: 300px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 150px; 
+  height: 50px;
+  z-index: 1000;
+}
+
+#name, #description{
+  font-size: 25px;
+}
+
+#name{
+top:180px ;
+left: 30px;
+}
+#description{
+
+  top: 230px;
+left: 10px;
+width: 400px;
+height: auto;
+}
+
+#image{
+  width: 400px;
+  height: auto;
+  top: 170px;
+ 
+}
+
+  }

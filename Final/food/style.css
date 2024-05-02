@@ -187,3 +187,124 @@ button{
   transform: scale(1.17)  rotate(20deg);
 
 }
+
+@media screen and (max-width: 768px) {
+  .button{
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    top: 10px;
+    right: 50px;
+    z-index: 1000;
+  }
+  .duck{
+    width: 400px;
+    height: auto;
+    top: 50px;
+    left: 20px;
+    position: absolute;
+    border-style: none;
+    display: flex;
+  }
+
+  
+  .bing{
+    display: flex;
+
+    overflow: hidden;
+    position: relative;
+    border: none;
+    left: 20px;
+    top: 50px;
+    background-color: transparent;
+    align-items: center;
+   
+  }
+
+  button img{
+    width: 100px;
+    height: auto;
+  }
+
+  .jiang{
+    display: flex;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    left: 100px;
+    top: 70px;
+    background-color: transparent;
+    
+  }
+
+
+  .ya{
+    display: flex;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    top: 150px;
+    left: -100px;
+    background-color: transparent;
+    
+  }
+  .cong{
+    display: flex;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    left: -130px;
+    top: 170px;
+    background-color: transparent;
+  
+    
+  }
+
+  .container{
+   
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 250px;
+    left: 60px;
+  }
+
+  .container img{
+    width: 200px;
+    height: auto;
+  }
+
+  .instructions{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-size:25px;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+}
+
+button{
+  cursor: cell;
+}
+
+
+
+
+.hulu{
+ opacity: 0;
+}
+
+}

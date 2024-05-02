@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Foods</title>
+        <title>Music</title>
         <link rel="stylesheet" href="./style.css"  type="text/css" />
       
     </head>
@@ -13,5 +13,60 @@
             <p>Back to Main Page</p>
            </div></a>
 
+        <div class="title">Beijing Opera</div>
+
+
+            <div class="player">
+                <audio id="audio" src="./audio.ogg"></audio>
+                <button id="playPauseBtn">Play</button>
+                <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
+                <span id="currentTime">0:00</span> / <span id="duration">1:06</span>
+
+
+
+
+           </div>
+
+           <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+       const audio = document.getElementById('audio');
+       const playPauseBtn = document.getElementById('playPauseBtn');
+       const progressBar = document.getElementById('progressBar');
+       const currentTimeDisplay = document.getElementById('currentTime');
+       const durationDisplay = document.getElementById('duration');
+    playPauseBtn.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = 'Pause';
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = 'Play';
+        }
+    });
+    audio.addEventListener('timeupdate', function() {
+        const percentage = (audio.currentTime / audio.duration) * 100;
+         progressBar.value = percentage;
+        currentTimeDisplay.textContent = formatTime(audio.currentTime);
+    });
+    progressBar.addEventListener('input', function() {
+         const time = (progressBar.value / 100) * audio.duration;
+        audio.currentTime = time;
+    });
+
+    audio.addEventListener('loadedmetadata', function() {
+        progressBar.max = 100;
+        durationDisplay.textContent = formatTime(audio.duration);
+    });
+
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+});
+
+
+
+</script>
     </body>
     </html>
